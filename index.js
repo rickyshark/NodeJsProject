@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyparser.json());
 
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.send({ msj: 'La aplicacion esta corriendo con exito!!' })
 });
 
