@@ -6,10 +6,14 @@ const app = express();
 app.use(bodyparser.json());
 
 
-
+app.get('*', (req, res) => {
+    res.send({ msj: 'La aplicacion esta corriendo con exito!!' })
+});
 
 app.set("port", process.env.PORT || 3000);
 app.listen(3000, () => { console.log("servidor encendido en el puerto 3000!!") });
+
+
 
 var mysC = mysqlConnection.createConnection({
 
